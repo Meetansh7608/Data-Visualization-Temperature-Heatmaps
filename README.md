@@ -1,5 +1,7 @@
 # Assignment 2 - Meetansh Gupta
 
+View Deployed Page: https://meetansh7608.github.io/Data-Visualization-Temperature-Heatmaps/
+
 https://observablehq.com/@texas-a-m-university4/assignment-2-meetansh-gupta@615
 
 View this notebook in your browser by running a web server in this folder. For
