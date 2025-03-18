@@ -1,6 +1,6 @@
 # Assignment 2 - Meetansh Gupta
 
-https://observablehq.com/@texas-a-m-university4/assignment-2-meetansh-gupta@608
+https://observablehq.com/@texas-a-m-university4/assignment-2-meetansh-gupta@615
 
 View this notebook in your browser by running a web server in this folder. For
 example:
@@ -14,7 +14,7 @@ import this module directly into your application. To npm install:
 
 ~~~sh
 npm install @observablehq/runtime@5
-npm install https://api.observablehq.com/d/8ec65bcd09c21425@608.tgz?v=3
+npm install https://api.observablehq.com/d/8ec65bcd09c21425@615.tgz?v=3
 ~~~
 
 Then, import your notebook and the runtime as:

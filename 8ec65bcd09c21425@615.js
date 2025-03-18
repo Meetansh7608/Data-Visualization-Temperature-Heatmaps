@@ -21,7 +21,7 @@ d3.csv(url, d => ({
     min_temp: +d.min_temperature}))
 )}
 
-function _6(temp_data,d3,DOM,width,legend)
+function _6(temp_data,d3,DOM,legend)
 {  
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
   const yearsSet = new Set(temp_data.map(d => d.year))
@@ -44,9 +44,10 @@ function _6(temp_data,d3,DOM,width,legend)
   // console.log(min_max_temps);
   // html`<pre>Total Rects: ${Object.entries(min_max_temps).length}</pre>`
   const pageheight = 750
+  const width = 900
   const svg = d3.select(DOM.svg(width, pageheight))
   
-  const height = 600  
+  const height = 600
   const margin = { left: 40, top: 0, right: 10, bottom: 30 }
   const graph = svg.append("g").attr("transform", `translate(0, ${pageheight-height})`);
 
@@ -182,7 +183,7 @@ function _6(temp_data,d3,DOM,width,legend)
 }
 
 
-function _7(temp_data,d3,DOM,width,legend)
+function _7(temp_data,d3,DOM,legend)
 {  
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
   const yearsSet = new Set(temp_data.map(d => d.year))
@@ -206,6 +207,7 @@ function _7(temp_data,d3,DOM,width,legend)
   // console.log(min_max_temps);
   // html`<pre>Total Rects: ${Object.entries(min_max_temps).length}</pre>`
   const pageheight = 745
+  const width = 900
   const svg = d3.select(DOM.svg(width, pageheight))
   
   const height = 600  
@@ -370,24 +372,24 @@ function _7(temp_data,d3,DOM,width,legend)
   d3.select(legendNode).select(".caption").style("font-size", "14px").style("font-weight", "normal")
   
   const keylegend = svg.append("g")
-    .attr("transform", `translate(${width/2-40}, 60)`)
+    .attr("transform", `translate(${width/2-50}, 60)`)
     .append(() => {
       return legendNode
     })
 
-  keylegend.append("circle").attr("cx", 360).attr("cy", 10).attr("r", 8)
+  keylegend.append("circle").attr("cx", 350).attr("cy", 10).attr("r", 8)
     .style("fill", "forestgreen").style("stroke", "black").style("stroke-width", 0.25)
-  keylegend.append("circle").attr("cx", 360).attr("cy", 40).attr("r", 8)
+  keylegend.append("circle").attr("cx", 350).attr("cy", 40).attr("r", 8)
     .style("fill", "blue").style("stroke", "black").style("stroke-width", 0.25)
   keylegend.append("text")
-    .attr("x", 370)
+    .attr("x", 360)
     .attr("y", 15)
     .style("text-anchor", "left")
     .style("font-size", "14px")
     .style("fill", "black")
     .text("Daily Max Temp, °C");
   keylegend.append("text")
-    .attr("x", 370)
+    .attr("x", 360)
     .attr("y", 45)
     .style("text-anchor", "left")
     .style("font-size", "14px")
@@ -407,7 +409,7 @@ export default function define(runtime, observer) {
   main.import("legend", child1);
   main.variable(observer("url")).define("url", _url);
   main.variable(observer("temp_data")).define("temp_data", ["d3","url"], _temp_data);
-  main.variable(observer()).define(["temp_data","d3","DOM","width","legend"], _6);
-  main.variable(observer()).define(["temp_data","d3","DOM","width","legend"], _7);
+  main.variable(observer()).define(["temp_data","d3","DOM","legend"], _6);
+  main.variable(observer()).define(["temp_data","d3","DOM","legend"], _7);
   return main;
 }
