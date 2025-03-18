@@ -1,0 +1,14 @@
+{
+  "name": "@texas-a-m-university4/assignment-2-meetansh-gupta",
+  "main": "8ec65bcd09c21425@607.js",
+  "version": "607.0.0",
+  "homepage": "https://observablehq.com/@texas-a-m-university4/assignment-2-meetansh-gupta",
+  "author": {
+    "name": "Data Viz",
+    "url": "https://observablehq.com/@texas-a-m-university4"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
