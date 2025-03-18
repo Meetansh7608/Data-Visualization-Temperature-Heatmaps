@@ -44,6 +44,7 @@ function _6(temp_data,d3,DOM,width,legend)
   // console.log(min_max_temps);
   // html`<pre>Total Rects: ${Object.entries(min_max_temps).length}</pre>`
   const pageheight = 750
+  const width = 800
   const svg = d3.select(DOM.svg(width, pageheight))
   
   const height = 600  
