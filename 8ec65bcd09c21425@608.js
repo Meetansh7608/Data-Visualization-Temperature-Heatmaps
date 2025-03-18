@@ -360,8 +360,8 @@ function _7(temp_data,d3,DOM,width,legend)
     console.log(temp_type)
     button.text(temp_type === 1 ? "Show Minimum Temperatures" : "Show Maximum Temperatures")
     button.style("background-color", temp_type === 1 ? "Navy" : "Maroon")
-    title.text(temp_type === 1 ? "Monthly Maximum Temperatures in Hong Kong, 1997-2017" : 
-               "Monthly Minimum Temperatures in Hong Kong, 1997-2017")
+    title.text(temp_type === 1 ? "Monthly Maximum Temperatures in Hong Kong, 2008-2017" : 
+               "Monthly Minimum Temperatures in Hong Kong, 2008-2017")
     updatechart(temp_type)
   })
 
